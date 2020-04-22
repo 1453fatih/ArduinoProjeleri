@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'CircleProgress.dart';
+
 import 'main.dart';
 
 class Dashboard extends StatefulWidget {
@@ -142,8 +142,7 @@ class _DashboardState extends State<Dashboard>
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     CustomPaint(
-                      foregroundPainter:
-                          CircleProgress(tempAnimation.value, true),
+                    
                       child: Container(
                         width: 200,
                         height: 200,
@@ -168,8 +167,7 @@ class _DashboardState extends State<Dashboard>
                       ),
                     ),
                     CustomPaint(
-                      foregroundPainter:
-                          CircleProgress(humidityAnimation.value, false),
+                      
                       child: Container(
                         width: 200,
                         height: 200,
