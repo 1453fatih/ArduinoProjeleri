@@ -5,7 +5,9 @@
 #define FIREBASE_HOST kendilinkini.firebaseio.com     Bu kısım Firebase Database Real Database kısmındaki linkinizi girin
 #define FIREBASE_AUTH token gir                       Proje ayarları Hizmet kısmındaki size özel tokeni girin
 #define WIFI_SSID Wifi adınızı Girin              
-#define WIFI_PASSWORD Wifi şifrenizi girin                
+#define WIFI_PASSWORD Wifi şifrenizi girin    
+
+String path = "/nem_sicaklik";
         
 DHTesp dht;
 
@@ -35,13 +37,13 @@ int tem=dht.getTemperature();
 Serial.print(hum ); Serial.println(hum);  nem değerimizi serial printe bastırıyoruz
 Serial.print(tem ); Serial.println(tem);  sıcaklık değerimizi bastırıyoruz
 
-Firebase.setInt(hum,hum);
+Firebase.setInt(path + "/Humidity/Data", hum);
   if (Firebase.failed()) {   buna gerek yok aslında ama patlarsak haberimiz olsun diye yazdım             
       Serial.print(setting hum failed);
       Serial.println(Firebase.error()); 
       }
 
-  Firebase.setInt(tem,tem);
+Firebase.setInt( path + "/Temperature/Data", tem);
   if (Firebase.failed()) {
       Serial.print(setting tem failed);
       Serial.println(Firebase.error()); 
