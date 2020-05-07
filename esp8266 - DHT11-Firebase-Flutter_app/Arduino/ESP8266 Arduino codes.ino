@@ -2,10 +2,10 @@
 #include FirebaseArduino.h   Firebase kütüphanemizi ekledik
 #include DHTesp.h            DHT kütüphanemiz
 
-#define FIREBASE_HOST kendilinkini.firebaseio.com     Bu kısım Firebase Database Real Database kısmındaki linkinizi girin
-#define FIREBASE_AUTH token gir                       Proje ayarları Hizmet kısmındaki size özel tokeni girin
-#define WIFI_SSID Wifi adınızı Girin              
-#define WIFI_PASSWORD Wifi şifrenizi girin    
+#define FIREBASE_HOST "kendilinkini.firebaseio.com"     Bu kısım Firebase Database Real Database kısmındaki linkinizi girin
+#define FIREBASE_AUTH "token gir"                    Proje ayarları Hizmet kısmındaki size özel tokeni girin
+#define WIFI_SSID "Wifi adınızı Girin"              
+#define WIFI_PASSWORD "Wifi şifrenizi girin"    
 
 String path = "/nem_sicaklik";
         
