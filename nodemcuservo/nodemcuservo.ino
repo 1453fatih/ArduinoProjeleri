@@ -61,7 +61,7 @@ void loop() {
 
         Serial.println(" \n Kapı Açıldı");  
       } 
-      if (command == "FAN") { 
+      if (command == "kapı_Kapa") { 
         servomotor.write(0);  
 
 
